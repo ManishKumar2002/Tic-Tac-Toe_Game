@@ -1,0 +1,144 @@
+.game-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.game-board {
+  flex: 1;
+}
+
+.game-info {
+  flex: 1;
+  max-width: 300px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.board-row {
+  display: flex;
+  gap: 5px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 36px;
+  font-weight: bold;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.square:hover {
+  background: #f5f5f5;
+}
+
+.square.filled {
+  color: #2c3e50;
+}
+
+.square.winning-square {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f8f9fa;
+}
+
+.winner-status {
+  background: #4CAF50;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info li {
+  margin-bottom: 8px;
+}
+
+.game-info button {
+  padding: 8px 12px;
+  background: #e9ecef;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.game-info button:hover {
+  background: #dee2e6;
+}
+
+.game-info .current-move {
+  font-weight: bold;
+  background: #d4edda;
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+.controls button {
+  padding: 8px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #0069d9;
+}
+
+@media (max-width: 768px) {
+  .game {
+    flex-direction: column;
+  }
+  
+  .game-info {
+    max-width: 100%;
+  }
+  
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+}
